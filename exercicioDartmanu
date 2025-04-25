@@ -1,0 +1,94 @@
+void main() {
+  // 1
+  print('Diogo');
+
+  // 2
+  String nome = 'Diogo';
+
+  // 3
+  List<String> nomes = [];
+  nomes.add(nome);
+
+  // 4
+  print('total de nomes: ${nomes.length}');
+
+  // 5 a
+  print('\n for:');
+  for (int i = 0; i < nomes.length; i++) {
+    print(nomes[i]);
+  }
+
+  // b
+  print('\n for-in:');
+  for (var n in nomes) {
+    print(n);
+  }
+
+  // c
+  print('\nwhile:');
+  int i = 0;
+  while (i < nomes.length) {
+    print(nomes[i]);
+    i++;
+  }
+
+  // 6
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    int soma = 0;
+    for (int n in numeros) {
+      soma += n;
+    }
+    print('\nsoma dos números: $soma');
+  }
+
+  // 7
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    int numeroProcurado = 10;
+    print('Contém o número $numeroProcurado? ${numeros.contains(numeroProcurado)}');
+  }
+
+  // 8
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    int pares = numeros.where((n) => n % 2 == 0).length;
+    print('Quantidade de pares: $pares');
+  }
+
+  // 9
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    List<int> maioresQue10 = numeros.where((n) => n > 10).toList();
+    print('Números maiores que 10: $maioresQue10');
+  }
+
+  // 10
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    bool todosPositivos = numeros.every((n) => n > 0);
+    print('Todos os números são positivos? $todosPositivos');
+  }
+
+  // 11
+  {
+    List<String> nomes = ['João', 'Ana', 'Paulo', 'Julia','Monyque'];
+    List<String> nomesComA = nomes.where((n) => n.startsWith('A')).toList();
+    print('\nNomes que começam com "A": $nomesComA');
+  }
+
+  // 12
+  {
+    List<int> numeros = [5, 12, 8, 3, 25, 7, 10, 2];
+    int numeroDigitado = 15;
+    int primeiroNumero = numeros[0];
+
+    if (numeroDigitado > primeiroNumero) {
+      print('$numeroDigitado é maior que $primeiroNumero');
+    } else if (numeroDigitado < primeiroNumero) {
+      print('$numeroDigitado é menor que $primeiroNumero');
+    } else {
+      print('$numeroDigitado é igual a $primeiroNumero');
+    }
+  }
+}
